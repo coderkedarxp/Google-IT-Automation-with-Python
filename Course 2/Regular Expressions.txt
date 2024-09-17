@@ -1,0 +1,51 @@
+import re
+log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
+regex = r"\[(\d+)\]"
+result = re.search(regex, log)
+print(result[1])
+
+
+---------------------------------------------------------------
+use of grep command
+
+grep python /usr/share/dict/words 
+-> this will show all words containing string 'python' (case sensitive)
+
+grep -i python /usr/share/dict/words 
+-> not is not a case sensitive
+
+-------------------------------
+
+grep l.rts /usr/share/dict/words
+-> between l and rts, there can be anything
+
+-----------------------------------------------
+
+circumflex indicates beginning and the dollar sign indicates end
+
+grep ^fruits /usr/share/dict/words
+-> gives all words starting with fruits
+
+grep cat$ /usr/share/dict/words
+-> gives all files ending with cat
+
+-------------------------------------------------------
+import re
+result = re.search(r"aza", "maze")
+print(result)
+
+print(re.search(r"^x", "xenon"))
+
+-------------------------------
+import re
+print(re.search(r"p.ng", "penguin"))
+
+-----------------------------------------------
+import re
+print(re.search(r"p.ng", "clapping"))
+print(re.search(r"p.ng", "sponge"))
+
+------------------------------------------------------
+import re
+print(re.search(r"p.ng", "Pangaea", re.IGNORECASE))
+--------------------------------------------------------
